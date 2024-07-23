@@ -1,58 +1,35 @@
-const { src, dest, watch, parallel } = require("gulp");
+import gulp, { series } from "gulp";
 
-const scss = require("gulp-sass")(require("sass"));
-const concat = require("gulp-concat");
-const uglify = require("gulp-uglify-es").default;
-const browserSync = require("browser-sync").create();
-const autoprefixer = require("gulp-autoprefixer");
+import { path } from "./gulp/config/path.js";
 
-function styles() {
-	return (
-		src("app/style/style.css")
-			.pipe(
-				autoprefixer({
-					overrideBrowserlist: ["last 3 version"],
-				})
-			)
-			.pipe(concat("style.min.css"))
-			.pipe(scss({ outputStyle: "compressed" }))
-			// expanded - полностью развёрнутый CSS;
-			// nested - показывает вложенность (по умолчанию);
-			// compact - каждый селектор на новой строке;
-			// compressed - всё в одну строку.
-			.pipe(dest("app/css"))
-			.pipe(browserSync.stream())
-	);
+import { plugins } from "./gulp/config/plugins.js";
+
+global.app = {
+    path: path,
+    gulp: gulp,
+    plugins: plugins
 }
 
-function scripts() {
-	return src([
-		"node_modules/swiper/swiper-bundle.js", 		
-		"app/js/**/*.js"
-		])
-		.pipe(concat("script.min.js"))
-		.pipe(uglify())
-		.pipe(dest("app/js-min"))
-		.pipe(browserSync.stream());
-}
 
-function watching() {
-	watch(["app/style/style.css"], styles);
-	watch(["app/js/main.js"], scripts);
-	watch(["app/**/*.html"]).on("change", browserSync.reload);
-}
+import { reset } from "./gulp/tasks/reset.js";
+import { html } from "./gulp/tasks/html.js";
+import { server } from "./gulp/tasks/server.js";
+import { scss } from "./gulp/tasks/scss.js";
+import { js } from "./gulp/tasks/js.js";
+import { images } from "./gulp/tasks/images.js";
+import { otfToTtf } from "./gulp/tasks/fonts.js"; // работает только как копия
 
-function browsersync() {
-	browserSync.init({
-		server: {
-			baseDir: "app/",
-		},
-	});
-}
+//const fonts = gulp.series(ttfToWoff2, fontsStyle);
 
-exports.styles = styles;
-exports.scripts = scripts;
-exports.watching = watching;
-exports.browsersync = browsersync;
+/*function watcher(){
+    gulp.watch(path.watch.html, html);
+    gulp.watch(path.watch.scss, scss);
+    gulp.watch(path.watch.js, js);
+    gulp.watch(path.watch.images, images);
+    gulp.watch(path.watch.otfToTtf, otfToTtf);
+} */
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+const mainTasks = gulp.parallel(otfToTtf, html, scss, js, images); 
+const dev = gulp.series(reset, mainTasks, gulp.parallel(server));
+
+gulp.task('default', dev);
