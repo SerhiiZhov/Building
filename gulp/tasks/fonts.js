@@ -1,15 +1,4 @@
-export const otfToTtf = () => {
-  return app.gulp.src(`${app.path.srcFolder}/fonts/*.woff2`, {})
-  .pipe(app.plugins.plumber(
-      app.plugins.notify.onError({
-          title: "fonts",
-          message: "Error: <%= error.message %>"
-      })
-  ))
- 
-  .pipe(app.gulp.dest(`${app.path.buildFolder}/fonts/`))
-}
-/* import fs from 'fs';
+/*import fs from 'fs';
 import fonter from 'gulp-fonter';
 import ttf2woff2 from 'gulp-ttf2woff2';
 
@@ -26,28 +15,20 @@ export const otfToTtf = () => {
         formats: ['ttf']
     }))
     .pipe(app.gulp.dest(`${app.path.srcFolder}/fonts/`))
-} 
+} */
 
 export const ttfToWoff2 = () => {
-    return app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, {})
+    return app.gulp.src(`${app.path.srcFolder}/fonts/*.woff2`, {})
     .pipe(app.plugins.plumber(
         app.plugins.notify.onError({
             title: "fonts",
             message: "Error: <%= error.message %>"
         })
     ))
-    .pipe(fonter({
-      subset: [66, 67, 68, 69, 70, 71],
-      formats: ['woff']
-    }))
-    .pipe(app.gulp.dest(`${app.path.build.fonts}`)) 
     .pipe(app.gulp.dest(`${app.path.build.fonts}`))
-    .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`))
-    .pipe(ttf2woff2())
-    .pipe(app.gulp.dest(`${app.path.build.fonts}`))
-}*/
-
-/*export const fontsStyle = () => {
+}
+/*
+export const fontsStyle = () => {
     let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
     
     fs.readdir(app.path.build.fonts, function(err, fontsFiles) {

@@ -16,4 +16,5 @@ export const plugins = {
     gulpconcat: gulpconcat,
     terser: terser,
     newer: newer
+
 }  

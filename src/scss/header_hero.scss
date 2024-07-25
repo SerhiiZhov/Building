@@ -1,7 +1,7 @@
 @import './null'; 
 @import './fonts';
 @import '../../node_modules/swiper/swiper-bundle';  
-@import './base.scss';  
+@import './base';  
 
 
  
@@ -89,7 +89,8 @@ header{
     }
 }
 
-.swiper{
+.swiper1,
+.swiper2{
     background: #3559C7;
     max-width: 41.5rem;
     width: 100%;
@@ -126,53 +127,112 @@ header{
         text-align: center;
         color:  #FFFFFF;
     };
-
-    &-btn{
-        display: flex;
-        width: 100%;
-        background: #292E3D;
-        height: 4rem;
-        align-items: center;
-
-        &__left,
-        &__right{
-            position: relative;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items:center;
-        }
-
-        &__left{
-            border-right: 0.1rem solid white;
-        };
-        
-        &__back,
-        &__next{
-            width: 100%;
-            position: relative;
-            background: transparent;
-            color:  #FFFFFF;
-            position: relative;
-            font-size: 1.8rem;
-            font-weight: 400;
-            line-height: 2rem;
-            text-align: center;
-        };
-
-        
-    };
 }
 
-.swiper-btn__left::before{
-    content: '';
-    background-image: ('@img/after.png');
-    object-fit: contain;
-    position: absolute;
+.swiper-btn{
+    display: flex;
+    width: 100%;
+    background: #292E3D;
+    height: 4rem;
+    align-items: center;
+
+    &__left,
+    &__right{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+
+    &__left{
+        border-right: 0.1rem solid white;
+    };
+    /*&__left::after{
+        content: '';
+        position: absolute;
+        background: url('../img/after.png');
+        top: 30%;
+        left: 6.45rem;;
+        width: 2.6rem;
+        height: 1.7rem;
+    };
+
+    &__right::before{
+        content: '';
+        position: absolute;
+        background: url('../img/after.png');
+        top: 30%;
+        right: 6.45rem;
+        width: 2.6rem;
+        height: 1.7rem;
+        transform: rotate(180deg);
+    };*/
+    
+    /*&__back,
+    &__next{
+        width: 100%;
+        position: relative;
+        background: transparent;
+        color:  #FFFFFF;
+        position: relative;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2rem;
+        text-align: center;
+    };
+
+    &__back{
+        padding-left: 4rem;
+    }
+    &__next{
+        padding-right: 4rem;
+    }*/
+    
+};
+
+.btn-left,
+.btn-right{
+    position: relative;
+    background: #292E3D;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: white;
+}
+
+.btn-left{
+    top:0;
+    left: 2rem;
+
+    &::after{
+        content: '';
+        position: absolute;
+        background: url('../img/after.png');
+        top: 28%;
+        left: 4.45rem;;
+        width: 2.6rem;
+        height: 1.7rem; 
+    }
+}
+.btn-right{
     top: 0;
-    left: 0;
-    z-index: 101;
-    width: 20px;
-    height: 17px;
+    right: 1rem;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        background: url('../img/after.png');
+        top: 30%;
+        right: 4.45rem;
+        width: 2.6rem;
+        height: 1.7rem;
+        transform: rotate(180deg);
+    }
 }

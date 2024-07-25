@@ -16,11 +16,11 @@
                     </div>
                     <div class="nav__menu">
                         <ul class="nav__menu-list" >
-                            <li class="nav__menu-ittem"><a href="#">Home</a></li>
+                            <li class="nav__menu-ittem nav__menu-ittem--active"><a href="#">Home</a></li>
                             <li class="nav__menu-ittem"><a href="#">About Us</a></li>
                             <li class="nav__menu-ittem"><a href="#">Projects</a></li>
                             <li class="nav__menu-ittem"><a href="#">Services</a></li>
-                            <li class="nav__menu-ittem nav__menu-ittem--active"><a href="#">Contact Us</a></li>
+                            <li class="nav__menu-ittem "><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -32,42 +32,42 @@
                     <img src="@img/bg.webp" alt="">
                 </div>
                 <div class="full-screen__head-box full-screen__container">
-                    Building things 
+                    Building lorethings 
                     <div class="full-screen__secondline">is our mission.</div>
                 </div>
-                <div class="full-screen-swiper swiper">
+                <div class="full-screen-swiper swiper swiper1">
                 
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper swiper1-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide">
-                                <div class="swiper-slide__title">
-                                    <h4 class="swiper-slide__title-in">Feature Projects</h4>
+                            <div class="swiper-slide swiper1-slide">
+                                <div class="swiper1-slide__title">
+                                    <h4 class="swiper1-slide__title-in">Feature Projects</h4>
                                 </div>
-                                <div class="swiper-slide__subtitle">
-                                    <p class="swiper-slide__subtitle-in">The National University of Architecture</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide__title">
-                                    <h4 class="swiper-slide__title-in">Slide 2</h4>
-                                </div>
-                                <div class="swiper-slide__subtitle">
-                                    <p class="swiper-slide__subtitle-in">Subtitle 2</p>
+                                <div class="swiper1-slide__subtitle">
+                                    <p class="swiper1-slide__subtitle-in">The National University of Architecture</p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide__title">
-                                    <h4 class="swiper-slide__title-in">Slide 3</h4>
+                            <div class="swiper-slide swiper1-slide" >
+                                <div class="swiper1-slide__title">
+                                    <h4 class="swiper1-slide__title-in">Slide 2</h4>
                                 </div>
-                                <div class="swiper-slide__subtitle">
-                                    <p class="swiper-slide__subtitle-in">Subtitle 3</p>
+                                <div class="swiper1-slide__subtitle">
+                                    <p class="swiper1-slide__subtitle-in">Subtitle 2</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper1-slide">
+                                <div class="swiper1-slide__title">
+                                    <h4 class="swiper1-slide__title-in">Slide 3</h4>
+                                </div>
+                                <div class="swiper1-slide__subtitle">
+                                    <p class="swiper1-slide__subtitle-in">Subtitle 3</p>
                                 </div>
                             </div>
                         </div>
                     
                     <div class="swiper-btn">
-                        <div class="swiper-btn__left"><button type="button" class="swiper-btn__back">Back</button></div>
-                        <div class="swiper-btn__right"><button type="button" class="swiper-btn__next">Next</button></div>
+                        <div class="swiper-btn__left"> <div class="btn-left">Back </div></div>
+                        <div class="swiper-btn__right"><div class="btn-right">Next</div></div>
                     </div>
                 </div>
             </section>
@@ -163,9 +163,18 @@
                     <h2>30 Years Experience</h2>
                 </div>
             </section>
-            <section class="section">
+            <section class="section main-bg">
+                <div class="main-bg__black-opacity"></div>
                 <div class="container">
-                    <h2>free consultation with exceptional quality</h2>
+                    <div class="consultation-wrapper">
+                        <div class="consultation">
+                            <h2 class="consultation__title">Free consultation with exceptional quality</h2>
+                            <p class="consultation__subtitle">Just one call away: <a  href="tel:+8411022703">+84 1102 2703</a></p>
+                        </div>
+                        <div class="consultation-btn">
+                            <button class="consultation-btn__btn">Get your consultation</button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="section">
@@ -183,165 +192,220 @@
                             </ul>
                         </div>
                         <div class="tabs__content">
-                            <div data-tab-content id="tab_1" class="tabs__content_item active">
-                                <!-- Icon of gallery-->
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/gal1.png" alt="gal">
+                            <div data-tab-content id="tab_1" class="swiper swiper-2 tabs__content_item active">
+                                <div class="swiper-wrapper swiper-w-2">
+                                    <div class="swiper-slide swiper-slide-2">
+                                        <!-- Icon of gallery-->
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/gal1.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">Wildstone Infra Hotel</h2>
+                                                <p class="descr__subtitle">2715 Ash Dr. San Jose, South Dakota</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/gal2.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">Wish Stone Building</h2>
+                                                <p class="descr__subtitle">2972 Westheimer  Santa Ana, Illinois </p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/gal3.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">Mr. Parkinston’s House</h2>
+                                                <p class="descr__subtitle">3517 W. Gray St. Utica, Pennsylvania</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/gal4.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">Oregano Height</h2>
+                                                <p class="descr__subtitle">2464 Royal Ln. Mesa, New Jersey </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">Wildstone Infra Hotel</h2>
-                                        <p class="descr__subtitle">2715 Ash Dr. San Jose, South Dakota</p>
-                                    </div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Residential slide 2</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Residential slide 3</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Residential slide 4</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Residential slide 5</div>
+                                  
                                 </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/gal2.png" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">Wish Stone Building</h2>
-                                        <p class="descr__subtitle">2972 Westheimer  Santa Ana, Illinois </p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/gal3.png" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">Mr. Parkinston’s House</h2>
-                                        <p class="descr__subtitle">3517 W. Gray St. Utica, Pennsylvania</p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/gal4.png" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">Oregano Height</h2>
-                                        <p class="descr__subtitle">2464 Royal Ln. Mesa, New Jersey </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-tab-content id="tab_2" class="tabs__content_item  ">
-                                <!-- Icon of gallery-->
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/gallorem.jpg" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab2</h2>
-                                        <p class="descr__subtitle">tab2</p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/gallorem.jpg" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab2</h2>
-                                        <p class="descr__subtitle">tab2</p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/gallorem.jpg" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab2</h2>
-                                        <p class="descr__subtitle">tab2</p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/gallorem.jpg" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab2</h2>
-                                        <p class="descr__subtitle">tab2 </p>
-                                    </div>
+                                <div class="swiper-navigate">
+                                    <div class="swiper-nav__leftbtn">Back</div>
+                                   <div class="swiper-pagination2"></div> 
+                                    <div class="swiper-nav__rightbtn">Next</div>
                                 </div>
                             </div>
-                            <div data-tab-content id="tab_3" class="tabs__content_item  ">
-                                <!-- Icon of gallery-->
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/m1.JPG" alt="gal">
+                            <div data-tab-content id="tab_2" class="swiper swiper-3 tabs__content_item  ">
+                                <div class="swiper-wrapper swiper-w-2">
+                                    <div class="swiper-slide swiper-slide-2">
+                                        <!-- Icon of gallery-->
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/gallorem.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab2</h2>
+                                                <p class="descr__subtitle">tab2</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/gallorem.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab2</h2>
+                                                <p class="descr__subtitle">tab2</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/gallorem.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab2</h2>
+                                                <p class="descr__subtitle">tab2</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/gallorem.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab2</h2>
+                                                <p class="descr__subtitle">tab2 </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab3</h2>
-                                        <p class="descr__subtitle">tab3</p>
-                                    </div>
+                                    <div class="swiper-slide swiper-slide-2 slide">commercial slide 2</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">commercial slide 3</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">commercial slide 4</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">commercial slide 5</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">commercial slide 6</div>
                                 </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/m1.JPG" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab3</h2>
-                                        <p class="descr__subtitle">tab3 </p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/m1.JPG" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab3</h2>
-                                        <p class="descr__subtitle">tab3</p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/m1.JPG" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab3</h2>
-                                        <p class="descr__subtitle">tab3 </p>
-                                    </div>
+                                <div class="swiper-navigate">
+                                    <div class="swiper-nav__leftbtn">Back</div>
+                                   <div class="swiper-pagination2"></div> 
+                                    <div class="swiper-nav__rightbtn">Next</div>
                                 </div>
                             </div>
-                            <div data-tab-content id="tab_4" class="tabs__content_item  ">
+                            
+                            <div data-tab-content id="tab_3" class="swiper swiper-4 tabs__content_item  ">
+                                <div class="swiper-wrapper swiper-w-2">
+                                    <!-- Icon of gallery-->
+                                    <div class="swiper-slide swiper-slide-2">
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/m1.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab3</h2>
+                                                <p class="descr__subtitle">tab3</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/m1.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab3</h2>
+                                                <p class="descr__subtitle">tab3 </p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/m1.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab3</h2>
+                                                <p class="descr__subtitle">tab3</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/m1.webp" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab3</h2>
+                                                <p class="descr__subtitle">tab3 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Institutional slide 2</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Institutional slide 3</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Institutional slide 4</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Institutional slide 5</div>
+                                </div>
+                                <div class="swiper-navigate">
+                                    <div class="swiper-nav__leftbtn">Back</div>
+                                   <div class="swiper-pagination2"></div> 
+                                    <div class="swiper-nav__rightbtn">Next</div>
+                                </div>
+                            </div>
+                            <div data-tab-content id="tab_4" class="swiper swiper-5 tabs__content_item  ">
                                 <!-- Icon of gallery-->
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/tab4.jpeg" alt="gal">
+                                <div class="swiper-wrapper swiper-w-2">
+                                    <div class="swiper-slide swiper-slide-2">
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/tab4.jpeg" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab4</h2>
+                                                <p class="descr__subtitle">tab4</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/tab4.jpeg" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab4</h2>
+                                                <p class="descr__subtitle">tab4</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/tab4.jpeg" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab4</h2>
+                                                <p class="descr__subtitle">tab4</p>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__content_gallery">
+                                            <div class="gallery__img_w">
+                                                <img src="./img/tab4.jpeg" alt="gal">
+                                            </div>
+                                            <div class="gallery__descr">
+                                                <h2 class="descr__title">tab4</h2>
+                                                <p class="descr__subtitle">tab4 </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab4</h2>
-                                        <p class="descr__subtitle">tab4</p>
-                                    </div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Mixed-use slide 2</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Mixed-use slide 3</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Mixed-use slide 4</div>
+                                    <div class="swiper-slide swiper-slide-2 slide">Mixed-use slide 5</div>
                                 </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/tab4.jpeg" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab4</h2>
-                                        <p class="descr__subtitle">tab4</p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/tab4.jpeg" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab4</h2>
-                                        <p class="descr__subtitle">tab4</p>
-                                    </div>
-                                </div>
-                                <div class="tabs__content_gallery">
-                                    <div class="gallery__img_w">
-                                        <img src="./img/tab4.jpeg" alt="gal">
-                                    </div>
-                                    <div class="gallery__descr">
-                                        <h2 class="descr__title">tab4</h2>
-                                        <p class="descr__subtitle">tab4 </p>
-                                    </div>
+                                <div class="swiper-navigate">
+                                    <div class="swiper-nav__leftbtn">Back</div>
+                                   <div class="swiper-pagination2"></div> 
+                                    <div class="swiper-nav__rightbtn">Next</div>
                                 </div>
                             </div>
                         </div>
-        
                     </div>
+                   
                 </div>
             </section>
             <section class="section section--blue ">

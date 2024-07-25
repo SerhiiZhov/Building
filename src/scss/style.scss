@@ -60,11 +60,7 @@
 
 
   /* services */ 
-
-  .section--blue {
-    background-color: #f6f8f7;
-
-  }
+  
   .container--services {
     max-width: 1080px;
     width: 100%;
@@ -126,6 +122,10 @@
     color: white;
   }
 
+  /* consultation.scss */
+
+  @import './consultation';
+
   /* tabs */
 
   
@@ -175,12 +175,117 @@ li.active {
   display: flex;
   max-width: 800px;
   width: 100%;
+  margin-bottom: 7.8rem;
 }
 
 .tabs__content_item {
   display: none;
+  flex-direction: column;
+  //flex-wrap: wrap;
+  //align-items: stretch;
+}
+
+.swiper-w-2{
+  width: 100%;
+}
+
+.swiper-navigate {
+  width: calc(100% - 32px);
+  height: 6.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+
+
+.swiper-pagination2{
+max-width: fit-content;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.swiper-nav__leftbtn,
+.swiper-nav__rightbtn{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 29.5rem;
+  width: 100%;
+  background: #292E3D;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.swiper-nav__leftbtn{
+  padding-left: 4rem;
+}
+.swiper-nav__rightbtn{
+  padding-right: 4rem;
+}
+
+.swiper-nav__leftbtn::before{
+  content: '';
+  position: absolute;
+  background: url('../img/after.png');
+  top: 36%;
+  left: 10.45rem;;
+  width: 2.6rem;
+  height: 1.7rem;
+}
+.swiper-nav__rightbtn::after{
+  content: '';
+  position: absolute;
+  background: url('../img/after.png');
+  top: 36%;
+  right: 10.45rem;
+  width: 2.6rem;
+  height: 1.7rem;
+  transform: rotate(180deg);
+}
+
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: #F6F8F7;
+  ;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #2947a9;
+}
+
+.swiper-slide-2{
+  display: flex;
+  width: 100%;
   flex-wrap: wrap;
   align-items: stretch;
+}
+
+.swiper2-btn{
+  padding: 0;
+}
+
+.slide{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 80px;
+  background-color:#fff;
+  color: #2947a9;
 }
 
 .tabs__content_item.active  {
@@ -235,7 +340,6 @@ li.active {
   text-align: left;
 
 }
-
 
 
   /* form */

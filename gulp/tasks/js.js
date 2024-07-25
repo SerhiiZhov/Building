@@ -6,8 +6,6 @@ export const js = () => {
             message: "Error: <%= error.message %>"
         })
     ))
-
-   
     .pipe(app.plugins.gulpconcat('main.min.js'))
     .pipe(app.plugins.terser())
     .pipe(app.gulp.dest(app.path.build.js))

@@ -23,6 +23,12 @@ html,body {
     margin: 0 auto;
     padding: 60px 0;
   }
+
+  .section--blue {
+    max-width: none;
+    background-color: #f6f8f7;
+    overflow-x: hidden;
+  }
   
   .container {
   
@@ -52,3 +58,4 @@ html,body {
       background: #2947A9;
       color: white;
   }
+

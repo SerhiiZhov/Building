@@ -17,19 +17,19 @@ import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
-import { otfToTtf } from "./gulp/tasks/fonts.js"; // работает только как копия
+import {ttfToWoff2 } from "./gulp/tasks/fonts.js"; // не работает конверте шрифтов
 
-//const fonts = gulp.series(ttfToWoff2, fontsStyle);
+// const fonts = gulp.series(ttfToWoff2, fontsStyle);
 
-/*function watcher(){
+function watcher(){
     gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.images, images);
-    gulp.watch(path.watch.otfToTtf, otfToTtf);
-} */
+    gulp.watch(path.watch.fonts, ttfToWoff2);
+}
 
-const mainTasks = gulp.parallel(otfToTtf, html, scss, js, images); 
-const dev = gulp.series(reset, mainTasks, gulp.parallel(server));
+const mainTasks = gulp.series(ttfToWoff2, gulp.parallel(html, scss, js, images)); 
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 
 gulp.task('default', dev);
