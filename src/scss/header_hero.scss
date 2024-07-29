@@ -89,6 +89,11 @@ header{
     }
 }
 
+.swiper-slide-active,
+.swiper-slide{
+    height: 100%;
+}
+
 .swiper1,
 .swiper2{
     background: #3559C7;
@@ -109,6 +114,7 @@ header{
 
     &-slide{
         padding: 0 5.2rem;
+        height: 100%;
     }
 
     &-slide__title h4{
@@ -147,7 +153,12 @@ header{
     }
 
     &__left{
-        border-right: 0.1rem solid white;
+        padding-left: 4rem;
+        border-right: 0.2rem solid white;
+    };
+    &__right{
+        padding-right: 4rem;
+        border-right: 0.2rem solid white;
     };
     /*&__left::after{
         content: '';
@@ -208,29 +219,27 @@ header{
 }
 
 .btn-left{
-    top:0;
-    left: 2rem;
+    
 
     &::after{
         content: '';
         position: absolute;
         background: url('../img/after.png');
         top: 28%;
-        left: 4.45rem;;
+        left: 2.45rem;;
         width: 2.6rem;
         height: 1.7rem; 
     }
 }
 .btn-right{
-    top: 0;
-    right: 1rem;
+    
     
     &::before{
         content: '';
         position: absolute;
         background: url('../img/after.png');
         top: 30%;
-        right: 4.45rem;
+        right: 2.45rem;
         width: 2.6rem;
         height: 1.7rem;
         transform: rotate(180deg);

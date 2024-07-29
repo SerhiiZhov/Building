@@ -2,6 +2,8 @@ const swiper = new Swiper('.swiper1', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+    noSwiping: true,
+    noSwipingClass: 'noswip',
   
     // Navigation arrows
     navigation: {
@@ -20,6 +22,9 @@ const swiper2 = new Swiper('.swiper-2', {
         return '<span class="' + className + '">'  + "</span>";
       },
     },
+    noSwiping: true,
+    noSwipingClass: 'noswip',
+  
   
   
     // Navigation arrows
@@ -34,7 +39,14 @@ const swiper3 = new Swiper('.swiper-3', {
     loop: true,
     pagination: {
       el: ".swiper-pagination2",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">'  + "</span>";
+      },
     },
+    noSwiping: true,
+    noSwipingClass: 'noswip',
+  
   
     // Navigation arrows
     navigation: {
@@ -48,7 +60,14 @@ const swiper4 = new Swiper('.swiper-4', {
     loop: true,
     pagination: {
       el: ".swiper-pagination2",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">'  + "</span>";
+      },
     },
+    noSwiping: true,
+    noSwipingClass: 'noswip',
+  
   
     // Navigation arrows
     navigation: {
@@ -62,7 +81,14 @@ const swiper5 = new Swiper('.swiper-5', {
     loop: true,
     pagination: {
       el: ".swiper-pagination2",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">'  + "</span>";
+      },
     },
+    noSwiping: true,
+    noSwipingClass: 'noswip',
+  
   
     // Navigation arrows
     navigation: {

@@ -58,6 +58,10 @@
     color: #858ead;
   }
 
+   /* about */ 
+   
+@import './about';
+
 
   /* services */ 
   
@@ -122,6 +126,10 @@
     color: white;
   }
 
+  /* expirience */
+
+  @import './expirience';
+
   /* consultation.scss */
 
   @import './consultation';
@@ -166,6 +174,7 @@ li.active {
 
 .body__tabs_box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   column-gap: 80px;
   margin-right: -32px;
