@@ -26,3 +26,28 @@ const tab = document.getElementById('tab_1')
     alert('Робота виконана? Нічого не забув?');
 })*/
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    let gototop = document.querySelector(".ufive_uptop");
+    let body = document.documentElement;
+  
+    window.addEventListener("scroll", check);
+  
+    function check() {
+      pageYOffset >= 500 && gototop.classList.add("ufive_upview");
+      pageYOffset < 500 && gototop.classList.remove("ufive_upview");
+    }
+
+    gototop.addEventListener('click', function(){
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    })
+
+  });
+  
+
+
+  

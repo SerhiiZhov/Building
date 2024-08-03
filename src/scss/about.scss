@@ -8,6 +8,7 @@
     left: -100rem;
     position: relative;
     max-width: 90.2rem;
+    min-height: 67rem;
     width: 100%;
     transition: all 1s ease-in-out;
 
@@ -90,5 +91,23 @@
         color: white;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         transition: all 0.3s ease-in-out;
+    }
+}
+
+@include bp ($point_3) {
+    .about{
+    flex-direction: column;
+    align-items:center;
+    }
+
+    .about__image_w{
+        min-height: 40rem;
+    }
+
+    .about__descr_w{
+        max-width: none;
+        margin-top: -8rem;
+        margin-left: 0;
+        padding-bottom: 0;
     }
 }

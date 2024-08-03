@@ -1,0 +1,20 @@
+@mixin bp ($width, $direction: max){
+    @if $direction == min {
+        @media screen and (min-width: $width) {
+            @content;       
+        }
+    } @else {
+        @media screen and (max-width: $width) {
+            @content;       
+        }
+    }
+}
+
+$point_1: 1200px;
+$point_2: 1024px; /* ! */
+$point_3: 1023.98px;
+$point_4: 768px; /* ! */
+$point_5: 767.98px;
+$point_6: 480px;
+$point_7: 375px; /* ! */
+$point_8: 374.98px; /* ! */
